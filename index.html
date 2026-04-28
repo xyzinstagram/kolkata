@@ -3,94 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek Jholoke Kolkata | A Bengal Cultural Story</title>
     
-    <title>Ek Jholoke Kolkata | #1 Archive of West Bengal Heritage & Cultural Photography</title>
-
-    <meta name="description" content="Official 2026 repository for West Bengal heritage. Cinematic photography of Kolkata streets, 23 districts, and Bengali culture by Avijit Sardar.">
-    
+    <meta name="description" content="Ek Jholoke Kolkata — more than just a page, it's a journey through the soul of a city. From the heritage of North Kolkata to the sweetness of Mishti Doi">
     <meta http-equiv="refresh" content="20;url=https://ekjholokekolkata.page.gd">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Ek Jholoke Kolkata: A Photographic Study of West Bengal Heritage",
-      "author": {
-        "@type": "Person",
-        "name": "Avijit Sardar",
-        "jobTitle": "Zoology Student & Cultural Photographer"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Ek Jholoke Kolkata Official"
-      },
-      "description": "A comprehensive digital archive covering the heritage, street life, and culture of the 23 districts of West Bengal.",
-      "mainEntityOfPage": "https://xyzinstagram.github.io/kolkata/",
-      "keywords": "Kolkata street food, 23 districts of West Bengal, Durga Pujo 2026, Howrah Bridge heritage"
-    }
-    </script>
+    <meta property="og:title" content="Ek Jholoke Kolkata | A Bengal Cultural Story">
+    <meta property="og:description" content="Ek Jholoke Kolkata — more than just a page, it's a journey through the soul of a city. From the heritage of North Kolkata to the sweetness of Mishti Doi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ekjholokekolkata.page.gd">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
 
     <style>
-        :root { --gold: #ffd700; --white: #ffffff; --bg: #000; }
-        body { background: var(--bg); color: var(--gold); font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; padding: 0; text-align: center; }
-        .hero { padding: 80px 20px; max-width: 1100px; margin: auto; }
+        :root { --brand-red: #E50914; --bg: #000; --text: #fff; --card-bg: #111; }
         
-        /* 2026 CORE WEB VITALS: Visual stability for ranking */
-        .loader { border: 2px solid #1a1a1a; border-top: 2px solid var(--gold); border-radius: 50%; width: 60px; height: 60px; animation: spin 0.8s linear infinite; margin: 0 auto 30px; contain: strict; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        body { 
+            background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; 
+            margin: 0; padding: 0; min-height: 100vh;
+        }
+
+        .hero-banner {
+            width: 100%; height: 50vh; min-height: 450px;
+            background: linear-gradient(to top, var(--bg) 0%, transparent 100%), 
+                        radial-gradient(circle, rgba(229,9,20,0.12) 0%, rgba(0,0,0,1) 85%);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; border-bottom: 1px solid #222;
+        }
+
+        /* Title at the Top */
+        h1 { 
+            font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 10vw, 6.5rem); 
+            color: var(--brand-red); text-transform: uppercase; margin: 0; letter-spacing: 2px;
+            line-height: 0.9;
+        }
+
+        /* Tagline Below */
+        .heritage-tag { 
+            color: #fff; font-size: 0.8rem; letter-spacing: 5px; font-weight: 400; 
+            opacity: 0.6; margin-top: 15px; display: block; text-transform: uppercase; 
+        }
+
+        .container { max-width: 1100px; padding: 40px; margin: 0 auto; }
+
+        .portal-card {
+            background: var(--card-bg); border: 1px solid #222; border-radius: 2px; padding: 60px 40px;
+            margin: -100px auto 60px; max-width: 500px; position: relative; z-index: 10;
+            text-align: center; box-shadow: 0 40px 100px rgba(0,0,0,1);
+        }
+
+        .progress-line {
+            width: 100%; height: 1px; background: #333; margin-bottom: 35px;
+            position: relative; overflow: hidden;
+        }
         
-        h1 { font-size: clamp(2.5rem, 10vw, 5rem); letter-spacing: -2px; margin: 0; font-weight: 800; background: linear-gradient(45deg, #fff, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .badge { display: inline-block; border: 1px solid var(--gold); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; margin-top: 10px; color: #fff; }
+        .progress-active {
+            height: 100%; background: var(--brand-red); width: 0%;
+            animation: progressLoad 20s linear forwards;
+        }
 
-        .timer-wrap { margin: 40px 0; background: #111; padding: 20px; border-radius: 12px; border: 1px solid #222; }
-        .btn-main { background: var(--gold); color: #000; padding: 18px 45px; text-decoration: none; font-weight: 900; border-radius: 50px; font-size: 1.1rem; display: inline-block; box-shadow: 0 10px 30px rgba(255,215,0,0.2); }
+        @keyframes progressLoad { 0% { width: 0%; } 100% { width: 100%; } }
 
-        /* CONTENT HUB: Forces ranking for long-tail 'Pinpoint' queries */
-        .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 100px; text-align: left; padding-bottom: 50px; }
-        .hub-item h2 { color: #fff; font-size: 1.4rem; border-bottom: 2px solid var(--gold); display: inline-block; margin-bottom: 20px; }
-        .hub-item p { color: #888; line-height: 1.9; font-size: 0.95rem; }
-        .hub-item strong { color: var(--gold); }
+        .cta-link {
+            display: inline-block; padding: 18px 50px; border: 1px solid rgba(255,255,255,0.3); 
+            color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; 
+            text-transform: uppercase; letter-spacing: 4px; transition: 0.5s ease;
+        }
+        
+        .cta-link:hover { background: #fff; color: #000; border-color: #fff; }
+
+        .archive-rows { text-align: left; }
+        .row { margin-bottom: 90px; }
+        .row h2 { font-size: 1.6rem; font-weight: 900; color: #fff; margin-bottom: 25px; letter-spacing: 1px; text-transform: uppercase; border-left: 3px solid var(--brand-red); padding-left: 20px; }
+        .row p { font-size: 1.05rem; line-height: 2; color: #999; font-weight: 300; margin: 0; text-align: justify; }
+        .row strong { color: #eee; font-weight: 600; }
+        .entity-tags { margin-top: 20px; font-size: 0.75rem; color: #444; text-transform: uppercase; letter-spacing: 3px; }
+
+        footer {
+            text-align: center; padding: 60px 0 40px; border-top: 1px solid #111;
+            font-size: 0.75rem; color: #333; letter-spacing: 2px; text-transform: uppercase;
+        }
+
+        @media (max-width: 600px) {
+            .portal-card { padding: 40px 20px; margin-top: -60px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="hero">
-        <div class="loader"></div>
+    <div class="hero-banner">
         <h1>EK JHOLOKE KOLKATA</h1>
-        <div class="badge">CERTIFIED CULTURAL REPOSITORY</div>
+        <span class="heritage-tag">A Journey Through the Soul of a City</span>
+    </div>
+
+    <div class="container">
         
-        <div class="timer-wrap">
-            <p style="margin:0; color:#888;">Establishing Secure Link to Main Gallery...</p>
-            <p style="font-size: 2rem; margin:10px 0;"><span id="countdown">20</span>s</p>
-            <a href="https://ekjholokekolkata.page.gd" class="btn-main">PROCEED TO GALLERY</a>
+        <div class="portal-card">
+            <div class="progress-line">
+                <div class="progress-active"></div>
+            </div>
+
+            <p style="margin: 0 0 20px; opacity: 0.5; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase;">[Since 2021 .]</p>
+            
+            <div style="font-size: 3.5rem; font-weight: 900; margin-bottom: 35px; color: #fff; font-family: 'Bebas Neue';">
+                <span id="countdown">20</span>S
+            </div>
+
+            <a href="https://ekjholokekolkata.page.gd" class="cta-link">Click To Main page </a>
+            <p style="margin-top: 20px; font-size: 0.65rem; color: #444; letter-spacing: 1px;">Click to skip the wait</p>
         </div>
 
-        <div class="hub-grid">
-            <div class="hub-item">
-                <h2>Urban Entities: Kolkata</h2>
-                <p>Leading archive for <strong>Kolkata street photography</strong> and heritage. High-authority coverage of <strong>Howrah Bridge</strong>, <strong>Victoria Memorial</strong>, and <strong>Maidan</strong>. Specialized insights into <strong>North Kolkata heritage</strong>, <strong>College Street Boi Para</strong>, and the <strong>Yellow Taxi</strong> culture.</p>
+        <div class="archive-rows">
+            <div class="row">
+                <h2>Kolkata Heritage</h2>
+                <p>Capturing the architectural soul of the city. From the iconic <strong>Howrah Bridge</strong> and <strong>Victoria Memorial</strong> to the spiritual sanctity of <strong>Dakshineswar</strong> and <strong>Belur Math</strong>. Documenting <strong>North Kolkata</strong>, <strong>Yellow Taxis</strong>, and <strong>Vintage Trams</strong>.</p>
+                <div class="entity-tags">Maidan • Prinsep Ghat • Park Street • Kumartuli</div>
             </div>
 
-            <div class="hub-item">
-                <h2>Local Flavor & Lifestyle</h2>
-                <p>Primary source for <strong>West Bengal Food</strong> and <strong>Lifestyle</strong> documentation. Featuring <strong>Kolkata Biryani</strong>, <strong>Arsalan</strong>, <strong>Park Street</strong> nightlife, <strong>Phuchka</strong>, and the intellectual <strong>Coffee House Adda</strong>. Complete coverage of <strong>Durga Pujo 2026</strong> traditions.</p>
+            <div class="row">
+                <h2>The Sweetness of Bengal</h2>
+                <p>A cinematic look at culinary traditions. Featuring the legendary <strong>Mishti Doi</strong>, <strong>Kolkata Biryani</strong>, <strong>Coffee House Adda</strong>, and the street-side magic of <strong>Phuchka</strong> and <strong>Kathi Rolls</strong>.</p>
+                <div class="entity-tags">Decker's Lane • Nizam's • Flurys • Gariahat</div>
             </div>
 
-            <div class="hub-item">
-                <h2>The 23 Districts Project</h2>
-                <p>A unified digital footprint for all <strong>23 districts of West Bengal</strong>. From the <strong>hills of Darjeeling</strong> and <strong>Kalimpong</strong> to the historic <strong>silk of Murshidabad</strong>, <strong>Bankura terracotta</strong>, and the <strong>Sundarbans</strong>. documenting <strong>Hooghly</strong>, <strong>Nadia</strong>, <strong>Purulia</strong>, and <strong>Siliguri</strong>.</p>
+            <div class="row">
+                <h2>The 23 Districts</h2>
+                <p>A journey through <strong>Darjeeling</strong>, <strong>Murshidabad</strong>, <strong>Bankura</strong>, the <strong>Sundarbans</strong>, <strong>Purulia</strong>, <strong>Shantiniketan</strong>, <strong>Nadia</strong>, and <strong>Siliguri</strong>.</p>
+                <div class="entity-tags">Alipurduar • Cooch Behar • Hooghly • Medinipur</div>
             </div>
         </div>
+
+        <footer>
+            &copy; 2026 Ek Jholoke Kolkata 
+        </footer>
+
     </div>
 
     <script>
-        let seconds = 20;
-        const countdownEl = document.getElementById('countdown');
-        const timer = setInterval(() => {
-            seconds--;
-            if (seconds >= 0) countdownEl.textContent = seconds;
-            if (seconds <= 0) {
-                clearInterval(timer);
+        let time = 20;
+        const display = document.getElementById('countdown');
+        const countdown = setInterval(() => {
+            time--;
+            if (time >= 0) display.textContent = time;
+            if (time <= 0) {
+                clearInterval(countdown);
                 window.location.href = "https://ekjholokekolkata.page.gd";
             }
         }, 1000);
