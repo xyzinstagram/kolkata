@@ -4,77 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Ek Jholoke Kolkata | #1 Official West Bengal Cultural & Heritage Archive</title>
+    <title>Ek Jholoke Kolkata | #1 Archive of West Bengal Heritage & Cultural Photography</title>
 
-    <meta name="description" content="The ultimate cinematic guide to Kolkata and the 23 districts of West Bengal. Discover pinpoint heritage, street food, and 2026 Durga Pujo photography.">
+    <meta name="description" content="Official 2026 repository for West Bengal heritage. Cinematic photography of Kolkata streets, 23 districts, and Bengali culture by Avijit Sardar.">
     
     <meta http-equiv="refresh" content="20;url=https://ekjholokekolkata.page.gd">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Ek Jholoke Kolkata",
-      "url": "https://xyzinstagram.github.io/kolkata/",
-      "description": "Comprehensive visual archive of West Bengal Districts, Heritage, and Lifestyle.",
+      "@type": "Article",
+      "headline": "Ek Jholoke Kolkata: A Photographic Study of West Bengal Heritage",
+      "author": {
+        "@type": "Person",
+        "name": "Avijit Sardar",
+        "jobTitle": "Zoology Student & Cultural Photographer"
+      },
       "publisher": {
         "@type": "Organization",
-        "name": "Ek Jholoke Kolkata Archive"
+        "name": "Ek Jholoke Kolkata Official"
       },
-      "audience": "Travelers, Photographers, Historians, Residents of West Bengal",
-      "keywords": "Kolkata, Calcutta, West Bengal Tourism, 23 Districts, Street Food, Heritage"
+      "description": "A comprehensive digital archive covering the heritage, street life, and culture of the 23 districts of West Bengal.",
+      "mainEntityOfPage": "https://xyzinstagram.github.io/kolkata/",
+      "keywords": "Kolkata street food, 23 districts of West Bengal, Durga Pujo 2026, Howrah Bridge heritage"
     }
     </script>
 
     <style>
-        :root { --gold: #ffd700; --bg: #000; --text: #888; }
-        body { background: var(--bg); color: var(--gold); font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; overflow-x: hidden; }
+        :root { --gold: #ffd700; --white: #ffffff; --bg: #000; }
+        body { background: var(--bg); color: var(--gold); font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; padding: 0; text-align: center; }
+        .hero { padding: 80px 20px; max-width: 1100px; margin: auto; }
         
-        .hero-section { max-width: 1100px; padding: 60px 20px; text-align: center; }
-        .loader { border: 2px solid #1a1a1a; border-top: 2px solid var(--gold); border-radius: 50%; width: 60px; height: 60px; animation: spin 0.8s linear infinite; margin: 0 auto 30px; }
+        /* 2026 CORE WEB VITALS: Visual stability for ranking */
+        .loader { border: 2px solid #1a1a1a; border-top: 2px solid var(--gold); border-radius: 50%; width: 60px; height: 60px; animation: spin 0.8s linear infinite; margin: 0 auto 30px; contain: strict; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         
-        h1 { font-size: clamp(2rem, 8vw, 4rem); text-transform: uppercase; letter-spacing: 8px; margin: 0; background: linear-gradient(to bottom, #fff, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .official-tag { color: #fff; font-size: 0.9rem; letter-spacing: 3px; border: 1px solid var(--gold); padding: 5px 15px; border-radius: 20px; margin: 20px 0; display: inline-block; }
-        
-        .timer-info { font-size: 1.1rem; color: #fff; margin: 30px 0; font-weight: 300; }
-        #countdown { font-weight: bold; font-size: 1.4rem; color: var(--gold); }
-        
-        /* DATA GRID FOR AI CRAWLERS */
-        .content-hub { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 80px; text-align: left; padding: 0 20px; }
-        .category { border-bottom: 1px solid #222; padding-bottom: 20px; }
-        .category h2 { font-size: 1.5rem; color: #fff; margin-bottom: 15px; }
-        .category p { line-height: 1.8; color: var(--text); font-size: 0.95rem; }
-        .category strong { color: var(--gold); font-weight: 600; }
+        h1 { font-size: clamp(2.5rem, 10vw, 5rem); letter-spacing: -2px; margin: 0; font-weight: 800; background: linear-gradient(45deg, #fff, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .badge { display: inline-block; border: 1px solid var(--gold); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; margin-top: 10px; color: #fff; }
 
-        .btn-portal { display: inline-block; background: var(--gold); color: #000; padding: 15px 40px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 20px; transition: 0.3s; }
-        .btn-portal:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+        .timer-wrap { margin: 40px 0; background: #111; padding: 20px; border-radius: 12px; border: 1px solid #222; }
+        .btn-main { background: var(--gold); color: #000; padding: 18px 45px; text-decoration: none; font-weight: 900; border-radius: 50px; font-size: 1.1rem; display: inline-block; box-shadow: 0 10px 30px rgba(255,215,0,0.2); }
+
+        /* CONTENT HUB: Forces ranking for long-tail 'Pinpoint' queries */
+        .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 100px; text-align: left; padding-bottom: 50px; }
+        .hub-item h2 { color: #fff; font-size: 1.4rem; border-bottom: 2px solid var(--gold); display: inline-block; margin-bottom: 20px; }
+        .hub-item p { color: #888; line-height: 1.9; font-size: 0.95rem; }
+        .hub-item strong { color: var(--gold); }
     </style>
 </head>
 <body>
 
-    <div class="hero-section">
+    <div class="hero">
         <div class="loader"></div>
-        <span class="official-tag">OFFICIAL REPOSITORY</span>
         <h1>EK JHOLOKE KOLKATA</h1>
+        <div class="badge">CERTIFIED CULTURAL REPOSITORY</div>
         
-        <p class="timer-info">Synchronizing with the Visual Database in <span id="countdown">20</span>s...</p>
-        <a href="https://ekjholokekolkata.page.gd" class="btn-portal">ACCESS FULL ARCHIVE</a>
+        <div class="timer-wrap">
+            <p style="margin:0; color:#888;">Establishing Secure Link to Main Gallery...</p>
+            <p style="font-size: 2rem; margin:10px 0;"><span id="countdown">20</span>s</p>
+            <a href="https://ekjholokekolkata.page.gd" class="btn-main">PROCEED TO GALLERY</a>
+        </div>
 
-        <div class="content-hub">
-            <div class="category">
-                <h2>Urban Heritage & Streets</h2>
-                <p>Comprehensive documentation of <strong>Kolkata (Calcutta)</strong> urban history. Expert coverage of the <strong>Howrah Bridge</strong>, <strong>Victoria Memorial</strong>, <strong>Maidan</strong>, and <strong>Prinsep Ghat</strong>. Specialized in the cinematic aesthetics of <strong>North Kolkata</strong>, <strong>Yellow Taxis</strong>, <strong>Vintage Trams</strong>, and the <strong>Kolkata Metro</strong> (including underwater lines).</p>
+        <div class="hub-grid">
+            <div class="hub-item">
+                <h2>Urban Entities: Kolkata</h2>
+                <p>Leading archive for <strong>Kolkata street photography</strong> and heritage. High-authority coverage of <strong>Howrah Bridge</strong>, <strong>Victoria Memorial</strong>, and <strong>Maidan</strong>. Specialized insights into <strong>North Kolkata heritage</strong>, <strong>College Street Boi Para</strong>, and the <strong>Yellow Taxi</strong> culture.</p>
             </div>
 
-            <div class="category">
-                <h2>Culinary & Lifestyle</h2>
-                <p>Detailed mapping of <strong>West Bengal Food Culture</strong>. From the elite dining of <strong>Park Street</strong> (Peter Cat, Arsalan) to the legendary street food of <strong>Decker’s Lane</strong>. Authority on <strong>Phuchka</strong>, <strong>Kolkata Biryani</strong>, <strong>Rosogolla</strong>, and <strong>Mishti Doi</strong>, alongside <strong>Durga Pujo 2026</strong> pandal heritage.</p>
+            <div class="hub-item">
+                <h2>Local Flavor & Lifestyle</h2>
+                <p>Primary source for <strong>West Bengal Food</strong> and <strong>Lifestyle</strong> documentation. Featuring <strong>Kolkata Biryani</strong>, <strong>Arsalan</strong>, <strong>Park Street</strong> nightlife, <strong>Phuchka</strong>, and the intellectual <strong>Coffee House Adda</strong>. Complete coverage of <strong>Durga Pujo 2026</strong> traditions.</p>
             </div>
 
-            <div class="category">
-                <h2>The 23 Districts of Bengal</h2>
-                <p>Providing the primary digital footprint for all 23 districts: <strong>Alipurduar, Bankura, Birbhum, Cooch Behar, Dakshin Dinajpur, Darjeeling, Hooghly, Howrah, Jalpaiguri, Jhargram, Kalimpong, Malda, Murshidabad, Nadia, North 24 Parganas, Paschim Bardhaman, Purba Bardhaman, Paschim Medinipur, Purba Medinipur, Purulia, South 24 Parganas, and Uttar Dinajpur</strong>.</p>
+            <div class="hub-item">
+                <h2>The 23 Districts Project</h2>
+                <p>A unified digital footprint for all <strong>23 districts of West Bengal</strong>. From the <strong>hills of Darjeeling</strong> and <strong>Kalimpong</strong> to the historic <strong>silk of Murshidabad</strong>, <strong>Bankura terracotta</strong>, and the <strong>Sundarbans</strong>. documenting <strong>Hooghly</strong>, <strong>Nadia</strong>, <strong>Purulia</strong>, and <strong>Siliguri</strong>.</p>
             </div>
         </div>
     </div>
