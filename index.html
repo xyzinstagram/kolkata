@@ -8,11 +8,11 @@
     <!-- Meta Description for SEO -->
     <meta name="description" content="Ek Jholoke Kolkata — more than just a page, it's a journey through the soul of a city. From the heritage of North Kolkata to the sweetness of Mishti Doi">
 
-    <!-- Open Graph for Social Media Sharing -->
+    <!-- Open Graph for Social Media Sharing (GitHub documentation references removed) -->
     <meta property="og:title" content="Ek Jholoke Kolkata | A Bengal Cultural Story">
     <meta property="og:description" content="Ek Jholoke Kolkata — more than just a page, it's a journey through the soul of a city. From the heritage of North Kolkata to the sweetness of Mishti Doi.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xyzinstagram.github.io/kolkata/">
+    <meta property="og:image" content="ejk.jpg">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
 
@@ -21,13 +21,17 @@
         
         body { 
             background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; 
-            margin: 0; padding: 0; min-height: 100vh;
+            margin: 0; padding: 0; min-height: 100vh; overflow-x: hidden;
         }
 
         .hero-banner {
-            width: 100%; height: 50vh; min-height: 450px;
+            width: 100%; height: 60vh; min-height: 450px;
+            /* Using ejk.jpg as the background */
             background: linear-gradient(to top, var(--bg) 0%, transparent 100%), 
-                        radial-gradient(circle, rgba(229,9,20,0.12) 0%, rgba(0,0,0,1) 85%);
+                        url('ejk.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             text-align: center; border-bottom: 1px solid #222;
         }
@@ -36,22 +40,23 @@
             font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 10vw, 6.5rem); 
             color: var(--brand-red); text-transform: uppercase; margin: 0; letter-spacing: 2px;
             line-height: 0.9;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
 
         .heritage-tag { 
             color: #fff; font-size: 0.8rem; letter-spacing: 5px; font-weight: 400; 
-            opacity: 0.6; margin-top: 15px; display: block; text-transform: uppercase; 
+            opacity: 0.9; margin-top: 15px; display: block; text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }
 
         .container { max-width: 1100px; padding: 40px; margin: 0 auto; }
 
         .portal-card {
-            background: var(--card-bg); border: 1px solid #222; border-radius: 2px; padding: 60px 40px;
+            background: var(--card-bg); border: 1px solid #222; border-radius: 4px; padding: 60px 40px;
             margin: -100px auto 60px; max-width: 500px; position: relative; z-index: 10;
             text-align: center; box-shadow: 0 40px 100px rgba(0,0,0,1);
         }
 
-        /* Static Line instead of animation */
         .progress-line {
             width: 100%; height: 1px; background: var(--brand-red); margin-bottom: 35px;
             opacity: 0.5;
@@ -60,17 +65,49 @@
         .cta-link {
             display: inline-block; padding: 18px 50px; border: 1px solid var(--brand-red); 
             color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; 
-            text-transform: uppercase; letter-spacing: 4px; transition: 0.5s ease;
+            text-transform: uppercase; letter-spacing: 4px; transition: all 0.4s ease;
             background: rgba(229, 9, 20, 0.05);
         }
         
-        .cta-link:hover { background: var(--brand-red); color: #fff; border-color: var(--brand-red); }
+        .cta-link:hover { 
+            background: var(--brand-red); 
+            box-shadow: 0 0 25px rgba(229, 9, 20, 0.4);
+            transform: translateY(-3px);
+        }
 
         .archive-rows { text-align: left; }
-        .row { margin-bottom: 90px; }
-        .row h2 { font-size: 1.6rem; font-weight: 900; color: #fff; margin-bottom: 25px; letter-spacing: 1px; text-transform: uppercase; border-left: 3px solid var(--brand-red); padding-left: 20px; }
+        
+        /* Smooth Scroll Animation */
+        .row { 
+            margin-bottom: 90px; 
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: all 0.8s ease-out;
+        }
+
+        .row.appear { opacity: 1; transform: translateY(0); }
+
+        .row h2 { 
+            font-size: 1.6rem; font-weight: 900; color: #fff; margin-bottom: 25px; 
+            letter-spacing: 1px; text-transform: uppercase; border-left: 3px solid var(--brand-red); 
+            padding-left: 20px; 
+        }
+
         .row p { font-size: 1.05rem; line-height: 2; color: #999; font-weight: 300; margin: 0; text-align: justify; }
+
         .entity-tags { margin-top: 20px; font-size: 0.75rem; color: #444; text-transform: uppercase; letter-spacing: 3px; }
+
+        .share-section {
+            text-align: center; padding: 40px 0; margin-top: 50px; border-top: 1px solid #111;
+        }
+
+        .share-btn {
+            background: transparent; border: 1px solid #333; color: #666; padding: 12px 24px;
+            cursor: pointer; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .share-btn:hover { border-color: var(--brand-red); color: #fff; }
 
         footer {
             text-align: center; padding: 60px 0 40px; border-top: 1px solid #111;
@@ -79,6 +116,7 @@
 
         @media (max-width: 600px) {
             .portal-card { padding: 40px 20px; margin-top: -60px; }
+            .row p { text-align: left; }
         }
     </style>
 </head>
@@ -97,7 +135,7 @@
             <p style="margin: 0 0 20px; opacity: 0.5; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase;">[ Since 2021 . ]</p>
             
             <div style="font-size: 2.2rem; font-weight: 900; margin-bottom: 35px; color: #fff; font-family: 'Bebas Neue'; letter-spacing: 2px;">
-                
+                <!-- Content area maintained as empty as per original -->
             </div>
 
             <!-- Manual Navigation Button -->
@@ -125,11 +163,39 @@
             </div>
         </div>
 
+        <div class="share-section">
+            <button class="share-btn" onclick="copyLink()">Copy Link to Share</button>
+        </div>
+
         <footer>
             &copy; 2026 Ek Jholoke Kolkata 
         </footer>
 
     </div>
+
+    <script>
+        // Reveal elements on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.row').forEach(row => observer.observe(row));
+
+        // Function to copy page link
+        function copyLink() {
+            const el = document.createElement('textarea');
+            el.value = window.location.href;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert("Link copied! Share the heritage of Kolkata.");
+        }
+    </script>
 
 </body>
 </html>
